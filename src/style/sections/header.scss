@@ -1,0 +1,177 @@
+//DEFAULT STYLE//
+.top-line{
+	position: relative;
+	@include clearfix;
+	background: transparent;
+	z-index: 10;
+	&__logo{
+		display: inline-block;
+		&:after{
+			content: "";
+			display: block;
+			width: 1px;
+			height: 30px;
+			background-color: #4d4d4d;
+			position: absolute;
+			right: 30px;
+			top: -1px;
+			@include MQ(md){
+				display: none;
+			}
+		}
+		@include MQ(sm) {
+			
+		}
+		@include MQ(xs) {
+			display: block;
+			float: none;
+			text-align: center;
+			margin-left: 0;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+	&__shop{
+		font-family: 'EMprint-Regular', 'Roboto', sans-serif;
+		display: block;
+		font-size: 16px;
+		background: rgba(60,60,60,.6);
+		color: #fff;
+		text-align: center;
+		padding: 10px 15px;
+		border-radius: 30px;
+		margin: 20px 0;
+		@include MQ(sm) {
+			margin-right: 10px;
+		}
+		@include MQ(xs) {
+			float: none;
+			font-size: 1em;
+			margin-right: 0;
+		}
+		&:hover{
+			color: #fff;
+			background: rgba(0,0,0,.50);
+		}
+	}
+}
+
+.top-banner{
+	position: relative;
+	&__img{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.header__wrapper{
+	position: relative;
+	position: relative;
+	top: -45px;
+}
+
+.header{
+	position: relative;
+	background: url(https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/banner.png) no-repeat right;
+	min-height: 700px;
+	width: 100%;
+	@include MQ(xs){
+		min-height: 460px;
+		background: none;
+	}
+}
+
+.header__banner{
+	display: block;
+	margin: 0 auto;
+}
+
+.header-left{
+	position: relative;
+	margin-top: 150px;
+	@include MQ(xs){
+		margin-top: 50px;
+	}
+		&__title{
+		font-family: 'EMprint-Semibold', 'Roboto', sans-serif;
+		font-size: 48px;
+		color:#fff;
+		font-weight: 500;
+		margin-bottom: 20px;
+		@include MQ(xs){
+			font-size: 24px;
+		}
+			span{
+				font-family: 'EMprint-Light', 'Roboto', sans-serif;
+				font-weight: 100;
+			}
+		}
+		&__desc{
+			font-family: 'EMprint-Light', 'Roboto', sans-serif;
+			font-size: 16px;
+			color: #fff;
+			font-weight: 300;
+			margin-bottom: 50px;
+			span{
+				font-family: 'EMprint-Semibold', 'Roboto', sans-serif;
+				font-weight: 500;
+			}
+		}
+		&__btn{
+			font-family: 'EMprint-Light', 'Roboto', sans-serif;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 300;
+			text-align: center;
+			padding: 15px 80px;
+			background: #1b51a0;
+			@include MQ(xs){
+				padding: 15px 40px;
+			}
+			
+			&:hover{
+				transition: all 1s easy;
+				color: #fff;
+				background: #085cd7;
+			}
+		}
+}
+
+
+.title{
+	font-size: em($h1FZ);
+}
+
+.title__desc{
+	font-size: em($h1desc);
+}
+
+.mobil-right{
+	display: block;
+	position: absolute;
+	top: 195px;
+	right: -40px;
+	z-index: -1;
+	@include MQ(md){
+		display: none;
+	}
+}
+
+.mobil-left{
+	display: block;
+	position: absolute;
+	bottom: -300px;
+	left: -225px;
+	z-index: -1;
+	@include MQ(md){
+		display: none;
+	}
+}
+
+.logo-mobil{
+	@include MQ(xs){
+		display: block;
+		text-align: center;
+	}
+}

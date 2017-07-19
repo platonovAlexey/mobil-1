@@ -1,0 +1,253 @@
+.test-title{
+	@extend .steps-title;
+	color: #000000;
+}
+
+.tests-start-text{
+	position: relative;
+	// padding: 75px 0 70px 0;
+	&__title{
+		font-size: 36px;
+		font-weight: 300;
+		color: #000;
+		margin-bottom: 30px;
+	}
+	&__list{
+		list-style-type: disc;
+		color: #000;
+		margin-bottom: 120px;
+		margin-left: 15px;
+	}
+	&__item{
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		span{
+			font-size: 24px;
+			font-weight: 500;
+		}
+	}
+	&__btn{
+		@extend .header-left__btn;
+		background: #1b51a0;
+		margin: 30px auto;
+	}
+}
+
+.test-item{
+	text-align: center;
+	border:1px solid #0067fe;
+	padding: 50px 60px;
+	&__title{
+		font-family: 'EMprint-Semibold', 'Roboto', sans-serif;
+		font-size: 16px;
+		color: #000000;
+	}
+	&__sale{
+		font-family: 'EMprint-Bold', 'Roboto', sans-serif;
+		font-size: 60px;
+		color: #0045cc;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+	&__text{
+		font-family: 'EMprint-Light', 'Roboto', sans-serif;
+		font-size: 16px;
+		color: #000000;
+		font-weight: 300;
+	}
+}
+
+.tests-start-text2{
+	background: #fff;
+	min-height: 504px;
+	margin: 0 auto;
+	padding: 75px 0 70px;
+	display: none;
+}
+
+// #crazy-quiz{
+// 	display: none;
+// }
+
+.q-form{
+	max-width: 666px;
+	margin: 0 auto 30px auto;
+	margin-bottom: 30px;
+}
+
+.q-text{
+	font-size: 18px;
+	color: #000;
+	font-weight: 300;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.step-form{
+	margin-bottom: 12px;
+}
+
+.q-txt{
+	@extend .q-text;
+	font-size: 16px;
+	padding-left: 15px;
+}
+
+.q-number{
+	color: #000;
+	font-size: 36px;
+	margin-bottom: 30px;
+	text-align: center;
+	span{
+		font-weight: bold;
+	}
+}
+
+.btn-next{
+	font-size: 18px;
+	color: #000 !important;
+	border:1px solid #000;
+	text-align: center;
+	font-weight: 300;
+	padding: 12px 100px;
+	transition: all 1s;
+	&:hover{
+		background: #000;
+		color: #fff !important;
+		transition: all 1s;
+	}
+	&:hover{
+		text-decoration: none;
+	}
+	&:checked{
+		text-decoration: none;
+	}
+	&:focus{
+		text-decoration: none;
+	}
+}
+
+.q-results{
+	display: none;
+	text-align: center;
+}
+
+.radio {
+  vertical-align: top;
+  width: 18px;
+  height: 18px;
+}
+.radio + span {
+  cursor: pointer;
+}
+.radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.radio:not(checked) + span {
+  position: relative;
+  padding: 0 0 0 35px;
+}
+.radio:not(checked) + span:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: #dddddd;
+}
+.radio:not(checked) + span:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1058c1;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.radio:checked + span:after {
+  opacity: 1;
+}
+
+.test-congratulations{
+	font-size: 36px;
+	color: #000;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.test-congratulations-none{
+	font-size: 30px;
+	color: #000;
+	font-weight: 300;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.test-text{
+	@extend .test-congratulations;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.test-promocode{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	border:1px dashed #000;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	width: 320px;
+	padding: 15px 0;
+	font-weight: bold;
+	margin: 30px auto 20px auto;
+}
+
+.btn-next-wrap{
+	text-align: center;
+}
+
+.go-selection{
+	@extend .test-promocode;
+	text-transform: none;
+	background: #1058c1;
+	border:none;
+	color: #ffffff;
+	display: block;
+	font-weight: normal;
+	&:hover{
+		background: #085cd7;
+		transition:1s all;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.restart-test{
+	@extend .go-selection;
+	color: #fff !important;
+	display: none;
+	margin: 20px auto;
+	transition:1s all;
+	&:hover{
+		background: #085cd7;
+		transition:1s all;
+		text-decoration: none;
+	}
+
+}
+// .radio:focus + span:before {
+//   box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+// }

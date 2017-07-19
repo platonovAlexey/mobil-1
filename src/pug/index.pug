@@ -1,0 +1,155 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+
+body
+	.layout_center_wrapper-project
+		+top-line()
+		img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/mobil-right.png", alt="", class="mobil-right")
+		img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/mobil-left.png", alt="", class="mobil-left")
+		.header__wrapper
+			.container
+				.row
+					header.header
+						.col-lg-7.col-md-7.col-sm-7.col-xs-12
+							.header-left
+								h1.header-left__title
+									|Получите скидку до 20%
+									br
+									span на моторное масло Mobil 1
+								.header-left__desc
+									|Пройдите тест, ответив на 10 простых вопросов о масле Mobil в период 
+									br
+									|с 17 июля по 31 июля, и получите 
+									|
+									span скидку до 20% 
+									|на продукцию Mobil 1.
+								a(href="#", class="header-left__btn go-to-test", onclick="pushStateToDataLayerMBL1goToTest(event) ('MBL1goToTest', 'goToTest')") Пройти тест
+		main.main
+			section.steps
+				h2.steps-title
+					|Как получить скидку?
+				.steps-one.steps-all
+					.container
+						.row.align-items-start
+							+grid-3()
+								.steps-img
+									img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/steps-item1.png", alt="Получить скидку")
+								.steps-text__title
+									|Войдите или зарегистрируйтесь
+								.steps-text__sub
+									| на 
+									a(href="https://www.ulmart.ru/", target="_blank", class="steps-text__link") ulmart.ru
+							+grid-3()
+								.steps-img
+									img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/steps-item2.png", alt="Получить скидку")
+								.steps-text__title
+									|Пройдите тест
+								.steps-text__sub
+									| из 10 вопросов о масле Mobil&nbsp;1 с 17 по 31 июля
+							+grid-3()
+								.steps-img
+									img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/steps-item3.png", alt="Получить скидку")
+								.steps-text__title
+									|Получите промокод
+								.steps-text__sub
+									| на приобретение продукции Mobil&nbsp;1 со скидкой
+							+grid-3()
+								.steps-img.steps-img__mod
+									img(src="https://fast.ulmart.ru/ns/verstka/mobil_promo_0717/img/steps-item4.png", alt="Получить скидку")
+								.steps-text__title
+									|Совершите покупку
+								.steps-text__sub
+									| с использованием полученного промокода
+			section.tests-start-text#tests__wrapper
+				h2.test-title
+					|Результат зависит от вас
+				.container
+					.row
+						+grid-4()
+							.test-item
+								.test-item__title
+									|Промокод на скидку
+								.test-item__sale
+									|-10%
+								.test-item__text
+									| при правильном ответе на 8 вопросов
+						+grid-4()
+							.test-item
+								.test-item__title
+									|Промокод на скидку
+								.test-item__sale
+									|-15%
+								.test-item__text
+									| при правильном ответе на 9 вопросов
+						+grid-4()
+							.test-item
+								.test-item__title
+									|Промокод на скидку
+								.test-item__sale
+									|-20%
+								.test-item__text
+									| при правильном ответе на 10 вопросов
+					.row
+						a(href="#", class="tests-start-text__btn", id="start-test", onclick="pushStateToDataLayerMBL1startTest(event) ('MBL1startTest', 'startTest')") Начать тест
+			section.tests-start-text2
+				#crazy-quiz
+					#q-number.q-number.q-number-option
+					#q-text.q-text
+					div
+						div
+							form#q-form.q-form
+								.step-form
+									input#q-opt_0(type='radio', class="radio")
+									span#q-opt-txt_0.q-txt(onclick="pushStateToDataLayerMBL1IssuesOne(event) ('MBL1Issues' , 'IssuesOne')")
+								.step-form
+									input#q-opt_1(type='radio', class="radio")
+									span#q-opt-txt_1.q-txt(onclick="pushStateToDataLayerMBL1IssuesTwo(event) ('MBL1Issues' , 'IssuesTwo')")
+								.step-form
+									input#q-opt_2(type='radio', class="radio")
+									span#q-opt-txt_2.q-txt(onclick="pushStateToDataLayerMBL1IssuesThree(event) ('MBL1Issues' , 'IssuesThree')")
+								.step-form
+									input#q-opt_3(type='radio', class="radio")
+									span#q-opt-txt_3.q-txt(onclick="pushStateToDataLayerMBL1IssuesFour(event) ('MBL1Issues' , 'IssuesFour')")
+							#q-results.q-results
+								
+						.btn-next-wrap
+							a(href="#", id="q-g-f", class="btn-next", onclick="pushStateToDataLayerMBL1nextQuestion(event) ('MBL1nextQuestion', 'nextQuestion', 'count')") Далее
+							a(href="#", id="restart-test", class="restart-test", onclick="pushStateToDataLayerMBL1RepeatTest(event) ('MBL1RepeatTest', 'RepeatTest')") Попробовать ещё раз
+
+
+			section.recommendation
+				.container
+					.row.align-items-start
+						.col-lg-9.col-md-9.col-sm-12.col-xs-12
+							.recommendation-text
+								span Не знаете какое масло выбрать?
+								br
+								|Воспользуйтесь специальным сервисом по подбору на официальном сайте Mobil.
+						.col-lg-3.col-md-3.col-sm-12.col-xs-12
+							a(href="https://ru-selector.eame.mobil.com/pvl-distributor/landing", target="_blank" class="recommendation-btn") Подобрать масло
+
+			section.section__goods
+				.container
+					.row
+						+grid-3()
+							each item, number in data.slice(0,1)
+								+goods(item)
+						+grid-3()
+							each item, number in data.slice(1,2)
+								+goods(item)
+						+grid-3()
+							each item, number in data.slice(2,3)
+								+goods(item)
+						+grid-3()
+							each item, number in data.slice(3,4)
+								+goods(item)
+					.btn-next-wrap
+						a(href="https://www.ulmart.ru/Engine_oil_M07?sort=0&viewType=1&rec=false", target="_blank" class="goods-selection-btn", onclick="pushStateToDataLayerMBL1selectOil(event) ('MBL1selectOil', 'selectOil')") Перейти к выбору
+
+
+	+footer-text()
+
+
+	include blocks/footer-service/footer-service

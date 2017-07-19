@@ -1,0 +1,31 @@
+.recommendation{
+	background: #474747;
+	padding: 17px 0 7px 0;
+	&-text{
+		font-family: 'EMprint-Light', 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: #fff;
+		line-height: 31px;
+		span{
+			font-family: 'EMprint-Semibold', 'Roboto', sans-serif;
+			font-size: 24px;
+			font-weight: 500;
+		}
+	}
+	&-btn{
+		font-family: 'EMprint-Light', 'Roboto', sans-serif;
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+		padding: 15px 0;
+		border: 1px solid #fff;
+		display: block;
+		font-weight: 500;
+		&:hover{
+			background: #1b51a0;
+			color: #fff;
+			transition: all 1s;
+		}
+	}
+}
